@@ -1,0 +1,12 @@
+# Nuxt generated files
+.nuxt
+dist
+
+# node modules
+node_modules
+
+# Editor config
+.vscode
+
+# Log files
+logs

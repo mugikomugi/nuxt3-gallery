@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/*--------------------
+下層ページCSS
+--------------------*/
+:root {
+  --textCol--: #4d4d4d;
+  --brCol--: #914704;
+  --jaFont--: "Noto Sans JP", sans-serif;
+  --golCol--: #CD8C01;
+  --yeCol--: #F9C732;
+  --enFont--: "Red Rose", serif;
+  --regular--: 400;
+  --semi--: 500;
+  --bold--: bold;
+  --ml--: 70px;
+  --topM--: 70px;
+  --lefM--: 50%;
+  --boxW--: 40%;
+  --mb20--: 2rem;
+  --p20--: 20px;
+}
+
+.pageHeader {
+  width: 100%;
+  background-color: var(--yeCol--);
+  background-image: url(../image/page-header.svg), url(../image/rasen.svg);
+  background-position: center top, left top;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.pageMain {
+  padding-bottom: 60px;
+}
+
+.h1Title a {
+  color: #fff;
+}
+
+.pageRead a {
+  display: inline-block;
+  font-family: var(--enFont--);
+  font-size: 4.2rem;
+  font-weight: var(--semi--);
+  padding-left: 50px;
+  background: url(../image/logo-wh.svg) left center no-repeat;
+  color: #fff;
+}
+
+
+.once__row {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: var(--semi--);
+  padding-bottom: 30px;
+}
+
+.pageHeader .container {
+  padding-top: 10px;
+}
+
+.pageTitle {
+  font-family: var(--enFont--);
+  font-weight: var(--semi--);
+  font-size: 4.2rem;
+  text-align: center;
+  margin: 50px 0 40px 0;
+}
+
+.pageIntro {
+  width: min(100%, 800px);
+  margin: 0 auto;
+}
+
+.gCode {
+  width: min(100%, 1000px);
+  margin: 0 auto 50px auto;
+}
+
+/*---------- code-prettify行番号表示 ----------*/
+.gCode .prettyprint ol.linenums>li {
+  list-style-type: decimal;
+  background: transparent;
+}
+
+.gCode .prettyprint ol.linenums {
+  margin-left: 30px;
+}
+
+/*---------- 下層footer ----------*/
+.pageFooter {
+  width: 100%;
+  background: #fff;
+}
+
+.foterRow {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 20px 0 20px;
+  border-top: solid 1px var(--textCol--);
+}
+
+.footer__img {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .pageRead a {
+    font-size: 2.8rem;
+    padding-top: 42px;
+    padding-left: 0;
+    background: url(../image/logo-wh.svg) left top no-repeat;
+  }
+
+  .once__row {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .pageMain {
+    padding-bottom: 50px;
+  }
+
+  .pageTitle {
+    font-size: 3.2rem;
+    margin: 40px 0 20px 0;
+  }
+
+  .gCode pre.prettyprint {
+    width: 100%;
+  }
+
+  .foterRow {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 40px 0 0 0px;
+  }
+
+  .footer__img {
+    margin: 20px auto 0 auto;
+    width: 180px;
+  }
+}
+
+/*--------------------
+テストページ
+--------------------*/
+.testNav {
+  width: min(100%, 1040px);
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+}
+
+.rowNav {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.rowNav a {
+  display: inline-block;
+  width: 100%;
+  line-height: 30px;
+  background: var(--brCol--);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.rowNav a:hover {
+  background: var(--yeCol--);
+}
+
+.rowTitle {
+  font-size: 2.8rem;
+  font-weight: var(--semi--);
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+
+.parent {
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+  background: #FFE57E;
+  font-size: 2rem;
+  color: var(--golCol--);
+  font-weight: var(--semi--);
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .rowTitle {
+    font-size: 2.4rem;
+  }
+
+  parent {
+    padding: 30px 10px;
+    font-size: 1.6rem;
+  }
+}
