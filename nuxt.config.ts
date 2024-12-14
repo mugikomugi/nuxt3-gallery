@@ -52,7 +52,6 @@ export default defineNuxtConfig({
       script: [
         { type: 'text/javascript', src: '/js/jquery-3.7.1.min.js', tagPosition: 'bodyClose' },
         { type: 'text/javascript', src: '/js/main.js', tagPosition: 'bodyClose' },
-        { type: "text/javascript", src: "/js/scroll.js", tagPosition: "bodyClose" },
       ],
     }
   },

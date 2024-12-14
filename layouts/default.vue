@@ -1,6 +1,7 @@
 <script setup lang=ts>
 useHead({
   script: [
+    { type: "text/javascript", src: "/js/scroll.js", tagPosition: "bodyClose" },
     { type: "text/javascript", src: "/js/gsap.js", tagPosition: "bodyClose" },
     {
       type: "text/javascript",
