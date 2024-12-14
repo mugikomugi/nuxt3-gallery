@@ -59,7 +59,7 @@ useHead({
                 </ul>
               </div>
             </div>
-            <p class="update">更新日 2024年12月8日</p>
+            <p class="update">更新日 2024年12月15日</p>
           </div>
         </section>
       </div>
