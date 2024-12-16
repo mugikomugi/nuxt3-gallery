@@ -1,34 +1,34 @@
 <script setup>
 useHead({
-  title: "Gsapについて | My Gallery Site",
-  meta: [
-    {
-      name: "description",
-      content: "gsapのコードです",
-    },
-  ],
+  title: 'Gsapについて | My Gallery Site',
+  meta: [ {
+          name: 'description',
+          content: 'gsapのコードです'
+          }
+        ]
 });
 //default以外のlayoutを使う
 definePageMeta({
-  layout: "code", //適用しない場合はfalse
+  layout: 'code',//適用しない場合はfalse
 });
+
 </script>
 
 <template>
-  <main class="pageMain">
-    <section class="container">
-      <h2 class="pageTitle">GSAP CODE</h2>
-      <div class="pageIntro">
-        <p class="mb20">
-          TOPページで適用したGSAP用コードです。スクロールトリガーのプラグインも使いました。<br />様々な動きによって専用プラグインも豊富に揃えられて、動作の仕組みに慣れるのに少し時間がかかりました。
-        </p>
-        <p class="mb20">
-          組み合わせによって色々なバリエーションが組めるので、LPやプロモーションサイトだったらかなり重宝しそうです。
-        </p>
-      </div>
+<main class="pageMain">
+  <div class="loader"></div>
+      <section class="container">
+        <h2 class="pageTitle">GSAP CODE</h2>
+        <div class="pageIntro">
+          <p class="mb20">
+            TOPページで適用したGSAP用コードです。スクロールトリガーのプラグインも使いました。<br>様々な動きによって専用プラグインも豊富に揃えられて、動作の仕組みに慣れるのに少し時間がかかりました。</p>
+          <p class="mb20">
+            組み合わせによって色々なバリエーションが組めるので、LPやプロモーションサイトだったらかなり重宝しそうです。
+          </p>
+        </div>
 
-      <div class="gCode">
-        <pre class="prettyprint linenums lang-js">
+        <div class="gCode">
+          <pre class="prettyprint linenums lang-js">
 //js
 const elements = document.querySelectorAll('.animeText');
 elements.forEach((elem) =&gt; {
@@ -112,16 +112,16 @@ panels.forEach((panel, i) =&gt; {
   });
 });
 */
-          </pre
-        >
-      </div>
-      <!-- //.gCode -->
-      <div class="linkBtn">
-        <a href="/">TOP PAGE</a>
-        <!-- <NuxtLink to="/">TOP PAGE</NuxtLink> -->
-        <!-- NuxtLink toで飛ばすとjs効かない -->
-      </div>
-    </section>
-    <!-- //.container -->
-  </main>
+          </pre>
+        </div>
+        <!-- //.gCode -->
+        <div class="linkBtn">
+          <a href="/">TOP PAGE</a>
+          <!-- <NuxtLink to="/">TOP PAGE</NuxtLink> -->
+          <!-- NuxtLink toで飛ばすとjs効かない -->
+        </div>
+      </section>
+      <!-- //.container -->
+
+    </main>
 </template>

@@ -3,12 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: true,
-  //
-  modules: ['nuxt-gtag'],
-  gtag: {
-    // 測定ID
-    id: 'G-GR3NJR8VLS'
-  },
   css: ["~/assets/css/reset.css",
     '~/assets/css/style.css'],
   app: {
@@ -52,11 +46,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
-
       //jsはtsconfig.jsonに登録publicに格納
       // 読み込む箇所: 'head' | 'bodyClose' | 'bodyOpen'
       script: [
-
         { type: 'text/javascript', src: '/js/jquery-3.7.1.min.js', tagPosition: 'bodyClose' },
         { type: 'text/javascript', src: '/js/main.js', tagPosition: 'bodyClose' },
       ],
