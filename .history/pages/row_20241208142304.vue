@@ -9,7 +9,7 @@ definePageMeta({
     <section class="container">
       <h2 class="pageTitle">ROOT TEST</h2>
       <div class="parent">
-        <p>親要素のrowファイル<br />ここはrow共通部分</p>
+        <p>親要素のrowファイル<br />名前で連動</p>
       </div>
       <NuxtPage />
     </section>

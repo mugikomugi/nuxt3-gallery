@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   css: ["~/assets/css/reset.css",
-    '~/assets/css/style.css'],
+    '~/assets/css/style.css'
+  ],
   app: {
     //共通head
     head: {

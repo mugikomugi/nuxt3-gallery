@@ -30,8 +30,8 @@ const name1 = ref("v-forの書出し");
     </div>
 
     <h3 class="rowTitle">{{ name1 }}</h3>
-    <p class="mt20 center">
-      VueでできているならVueも使えるはずだと思い、v-forを差し込んでみました。<br />連想配列のループ書き出しは便利です。scriptの中にref関数で呼び出せました。
+    <p class="mt20">
+      VueでできているならVueも使えるはずだと思い、差し込んでみました。<br />連想配列のループ書き出しは便利です。scriptの中にref関数で呼び出せました。
     </p>
     <ul class="vTest">
       <li v-for="item in items" :key="item">

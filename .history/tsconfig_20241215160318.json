@@ -1,0 +1,7 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json", //jSファイルをpublicフォルダ配下に置いて下記設定、tscのエラー回、
+  "exclude": [
+    "./public/js/*.js"
+  ]
+}

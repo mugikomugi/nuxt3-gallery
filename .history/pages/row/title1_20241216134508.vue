@@ -15,6 +15,7 @@ const itemLi = [
   { num: "1", text: "タイトル1" },
   { num: "2", text: "タイトル2" },
   { num: "3", text: "タイトル3" },
+  { num: "4", text: "タイトル4" },
 ];
 
 const items = ref(itemLi);

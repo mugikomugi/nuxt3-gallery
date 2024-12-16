@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: true,
+  routeRules: {
+    '/row': {
+      override: true,
+      // 上書き後のルールをここに記述
+      isGenerated: true,
+    }
+  },
   css: ["~/assets/css/reset.css",
     '~/assets/css/style.css'],
   app: {

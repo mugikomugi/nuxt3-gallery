@@ -3,8 +3,20 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: true,
+  routeRules: {
+    // 全てのルートに対して上書き
+    '/': {
+      override: true,
+      // 上書き後のルールをここに記述
+      // 例:
+      // isGenerated: true,
+      // priority: 1.0,
+      // changefreq: 'daily'
+    }
+  },
   css: ["~/assets/css/reset.css",
-    '~/assets/css/style.css'],
+    '~/assets/css/style.css'
+  ],
   app: {
     //共通head
     head: {
