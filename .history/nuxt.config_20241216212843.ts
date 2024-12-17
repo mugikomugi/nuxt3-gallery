@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: true,
+  //gtagモジュール
+  modules: ['nuxt-gtag'],
+  gtag: {
+    // 測定ID
+    id: 'G-GR3NJR8VLS'
+  },
   css: ["~/assets/css/reset.css",
     '~/assets/css/style.css'],
   app: {
@@ -50,25 +56,10 @@ export default defineNuxtConfig({
       //jsはtsconfig.jsonに登録publicに格納
       // 読み込む箇所: 'head' | 'bodyClose' | 'bodyOpen'
       script: [
-        {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-GR3NJR8VLS',
-          async: true,
-        },
-        {
-          innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'G-GR3NJR8VLS');
-          `,
-          type: 'text/javascript',
-          charset: 'utf-8',
-        },
         { type: 'text/javascript', src: '/js/jquery-3.7.1.min.js', tagPosition: 'bodyClose' },
         { type: 'text/javascript', src: '/js/main.js', tagPosition: 'bodyClose' },
       ],
-      __dangerouslyDisableSanitizers: ['script'],
-    },
+    }
   },
 });
