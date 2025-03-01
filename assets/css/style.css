@@ -26,7 +26,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: var(--jaFont--);
-  font-optical-sizing: auto;
   font-weight: var(--regular--);
   font-style: normal;
   color: var(--textCol--);

@@ -19,7 +19,7 @@
       </li>
       <li>
         <a
-          href="https://qiita.com/kanrek_jyosi/items/ffbeab1ce30da87832ab"
+          href="https://qiita.com/kanrek_jyosi/items/90b4201eaa1b8b94a6d1"
           target="_blank"
           rel="noopener"
           ><img src="~/assets/image/qiita.svg" alt="Qiita"
