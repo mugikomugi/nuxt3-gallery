@@ -36,6 +36,7 @@
           ><img src="~/assets/image/qiita.svg" alt="Qiita"
         /></a>
       </li>
+      <li><a href="https://zenn.dev/okamechan/articles/5857c21c0b9d21" target="_blank" rel="noopener"><img src="~/assets/image/zenn.svg" alt="zenn"></a></li>
     </ul>
     <div class="copy">
       <small>Copyright 2024 mugikomugi All Rights Reserved. 無断転載禁止</small>
