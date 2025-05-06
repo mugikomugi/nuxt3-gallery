@@ -1,18 +1,23 @@
 <script setup lang=ts>
-// 相対パスを使用して、ビルドプロセスのパス解決を回避
-import "../assets/css/prettify.css";
-import "../assets/css/sunburst.css";
-import "../assets/css/page.css";
+import "@/assets/css/prettify.css";
+import "@/assets/css/sunburst.css";
+import "@/assets/css/page.css";
 
 // クライアントサイドでのみスクリプトを読み込む
 onMounted(() => {
-  // クライアントサイドでのみ実行
-  const loadScript = (src: string) => {
+  const loadScript = (src: string): Promise<void> => {
     return new Promise((resolve, reject) => {
+      // 既に読み込まれているスクリプトを確認
+      if (document.querySelector(`script[src="${src}"]`)) {
+        resolve();
+        return;
+      }
+
       const script = document.createElement("script");
       script.src = src;
-      script.onload = resolve;
-      script.onerror = reject;
+      script.onload = () => resolve();
+      script.onerror = (e) =>
+        reject(new Error(`スクリプト読み込みエラー: ${src}`));
       document.body.appendChild(script);
     });
   };
@@ -26,6 +31,9 @@ onMounted(() => {
       // 必要に応じてユーザーにエラーを通知することも検討
     });
 });
+
+import "@/assets/css/prettify.css";
+import "@/assets/css/sunburst.css";
 </script>
 
 <template>

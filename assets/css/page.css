@@ -75,6 +75,7 @@
 .gCode {
   width: min(100%, 1000px);
   margin: 0 auto 50px auto;
+  color: #fff;
 }
 
 /*---------- code-prettify行番号表示 ----------*/

@@ -1,14 +1,26 @@
 <script setup lang=ts>
-useHead({
-  script: [
-    { type: "text/javascript", src: "/js/gsap.js", tagPosition: "bodyClose" },
-    {
-      type: "text/javascript",
-      src: "/js/ScrollTrigger.js",
-      tagPosition: "bodyClose",
-    },
-    { type: "text/javascript", src: "/js/effect.js", tagPosition: "bodyClose" },
-  ],
+//useHead使わずonMountedを使用
+// もしくは、onMountedを使用してクライアントサイドでのみスクリプトを読み込む
+// こちらの方法がハイドレーションエラーを防ぐためにより安全です
+onMounted(() => {
+  // クライアントサイドでのみ実行
+  const loadScript = (src: string) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.body.appendChild(script);
+    });
+  };
+
+  // スクリプトを順番に読み込む
+  Promise.resolve()
+    .then(() => loadScript("/js/scroll.js"))
+    .then(() => loadScript("/js/gsap.js"))
+    .then(() => loadScript("/js/ScrollTrigger.js"))
+    .then(() => loadScript("/js/effect.js"))
+    .catch((err) => console.error("スクリプト読み込みエラー:", err));
 });
 </script>
 <template>
@@ -24,7 +36,7 @@ useHead({
         </div>
         <section class="container">
           <div class="read animeText">MY-PORTFOLIO</div>
-          <h1 class="h1Title animeText">Gallery-Nuxt.ver</h1>
+          <h1 class="h1Title animeText">Gallery-Nuxt3.ver</h1>
           <h2 class="once animeText">js・php開発用サイト</h2>
 
           <div class="leftArea eBox1">
@@ -47,7 +59,7 @@ useHead({
                   <li>Node.js 22.11.0</li>
                   <li>GSAP 3.12.5</li>
                   <li class="mb20">jQuery 3.7.1.</li>
-                  <li>Netfliy</li>
+                  <li>Netlify</li>
                 </ul>
                 <ul>
                   <li>Figma</li>

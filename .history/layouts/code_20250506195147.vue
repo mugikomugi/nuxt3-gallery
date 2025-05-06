@@ -6,13 +6,19 @@ import "../assets/css/page.css";
 
 // クライアントサイドでのみスクリプトを読み込む
 onMounted(() => {
-  // クライアントサイドでのみ実行
-  const loadScript = (src: string) => {
+  const loadScript = (src: string): Promise<void> => {
     return new Promise((resolve, reject) => {
+      // 既に読み込まれているスクリプトを確認
+      if (document.querySelector(`script[src="${src}"]`)) {
+        resolve();
+        return;
+      }
+
       const script = document.createElement("script");
       script.src = src;
-      script.onload = resolve;
-      script.onerror = reject;
+      script.onload = () => resolve();
+      script.onerror = (e) =>
+        reject(new Error(`スクリプト読み込みエラー: ${src}`));
       document.body.appendChild(script);
     });
   };

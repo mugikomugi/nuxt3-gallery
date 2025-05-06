@@ -25,7 +25,7 @@ useHead({
         </div>
         <section class="container">
           <div class="read animeText">MY-PORTFOLIO</div>
-          <h1 class="h1Title animeText">Gallery-Nuxt.ver</h1>
+          <h1 class="h1Title animeText">Gallery-Nuxt3.ver</h1>
           <h2 class="once animeText">js・php開発用サイト</h2>
 
           <div class="leftArea eBox1">
@@ -48,7 +48,7 @@ useHead({
                   <li>Node.js 22.11.0</li>
                   <li>GSAP 3.12.5</li>
                   <li class="mb20">jQuery 3.7.1.</li>
-                  <li>Netfliy</li>
+                  <li>Netlify</li>
                 </ul>
                 <ul>
                   <li>Figma</li>

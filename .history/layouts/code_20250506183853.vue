@@ -1,9 +1,10 @@
 <script setup lang=ts>
-// 相対パスを使用して、ビルドプロセスのパス解決を回避
-import "../assets/css/prettify.css";
-import "../assets/css/sunburst.css";
-import "../assets/css/page.css";
+// CSSインポートはスクリプトの先頭に配置するのがベストプラクティス
+import "@/assets/css/prettify.css";
+import "@/assets/css/sunburst.css";
+import "@/assets/css/page.css";
 
+//ここもuseHead使わずonMountedに
 // クライアントサイドでのみスクリプトを読み込む
 onMounted(() => {
   // クライアントサイドでのみ実行

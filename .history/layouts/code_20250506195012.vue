@@ -1,5 +1,4 @@
 <script setup lang=ts>
-// 相対パスを使用して、ビルドプロセスのパス解決を回避
 import "../assets/css/prettify.css";
 import "../assets/css/sunburst.css";
 import "../assets/css/page.css";

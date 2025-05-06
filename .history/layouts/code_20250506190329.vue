@@ -1,10 +1,8 @@
 <script setup lang=ts>
-// 相対パスを使用して、ビルドプロセスのパス解決を回避
-import "../assets/css/prettify.css";
-import "../assets/css/sunburst.css";
-import "../assets/css/page.css";
+import "@/assets/css/prettify.css";
+import "@/assets/css/sunburst.css";
+import "@/assets/css/page.css";
 
-// クライアントサイドでのみスクリプトを読み込む
 onMounted(() => {
   // クライアントサイドでのみ実行
   const loadScript = (src: string) => {
@@ -21,10 +19,7 @@ onMounted(() => {
   Promise.resolve()
     .then(() => loadScript("/js/prettify.js"))
     .then(() => loadScript("/js/code.js"))
-    .catch((err) => {
-      console.error("スクリプト読み込みエラー:", err);
-      // 必要に応じてユーザーにエラーを通知することも検討
-    });
+    .catch((err) => console.error("スクリプト読み込みエラー:", err));
 });
 </script>
 
