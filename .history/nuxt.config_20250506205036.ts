@@ -33,16 +33,24 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400..700&family=Red+Rose:wght@400..700&display=swap' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-      ]
-    },
-    runtimeConfig: {
-      // サーバーサイドのみで使用する環境変数
-      // privateキーはクライアントに公開されません
+      ],
+      // Nuxt3ではscriptタグの使い方が変わりました
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-GR3NJR8VLS',
+          async: true
+        },
+        {
+          children: `
+          window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      // クライアントサイドにも公開する変数
-      public: {
-        gaMeasurementId: process.env.GOOGLE_ANALYTICS_ID || 'G-GR3NJR8VLS' // あなたのGA4測定ID
-      }
+  gtag('config', 'G-GR3NJR8VLS');
+          `,
+          type: 'text/javascript',
+        },
+      ]
     },
   }
 });
