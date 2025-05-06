@@ -1,5 +1,5 @@
 // JavaScript Document
-jQuery(function ($) {
+$(function () {
   const navSp = $('#navSp');
   let menuW, iconTop;
   if (window.matchMedia('(min-width: 768px)').matches) {
@@ -34,9 +34,9 @@ jQuery(function ($) {
   });
 
   //loader
-  $('.loader').delay(900).fadeOut(800, function () {
-    $(this).remove();
-  });
+    $('.loader').delay(900).fadeOut(800, function () {
+      $(this).remove();
+    });
 
 
   //side MENU

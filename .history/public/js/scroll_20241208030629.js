@@ -1,4 +1,4 @@
-jQuery(function ($) {
+$(function () {
   //
   const header = $('#header').offset().top;
   const section1 = $('#section1').offset().top;
