@@ -37,7 +37,23 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400..700&family=Red+Rose:wght@400..700&display=swap' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-      ]
+      ],
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-GR3NJR8VLS',
+          async: true, tagPosition: 'head'
+        },
+        {
+          innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GR3NJR8VLS');
+          `,
+          type: 'text/javascript'
+        },
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
     },
   }
 });
