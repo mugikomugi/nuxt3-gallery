@@ -50,4 +50,14 @@ jQuery(function ($) {
     //navSp.stop().animate({ 'right': menuW }, 500);
   });
 
+    //footerアニメ
+  function pom() {
+    $('.pom').animate({ 'opacity': 1 }, 1000,
+      function () {
+        $(this).animate({ 'opacity': 0 }, 1000);
+        setTimeout(pom, 4000);
+      });
+  }
+  pom();
+
 });
