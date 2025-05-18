@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 120">
+  <defs>
+    <path id="motionPath" d="M 220,100 Q 150,30 20,80" fill="transparent" />
+  </defs>
+  
+  <circle cx="0" cy="0" r="7" fill="#929496">
+    <animateMotion
+      dur="3s"
+      repeatCount="indefinite"
+      path="M 220,100 Q 150,30 20,80"
+      rotate="auto" />
+  </circle>
+
+</svg>
