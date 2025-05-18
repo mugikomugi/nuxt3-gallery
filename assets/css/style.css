@@ -399,11 +399,46 @@ body {
 
 .footerImg {
   margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 322px;
+  position: relative;
+}
+
+.pom,
+.bullet {
+  position: absolute;
+}
+
+.pom {
+  top: -10px;
+  left: -165px;
+  opacity: 0;
+}
+
+.bullet {
+  width: 300px;
+  height: auto;
+  top: 28px;
+  left: -230px;
+}
+
+.fCaption {
+  font-size: 1.4rem;
   text-align: center;
 }
 
-.footerImg figcaption {
-  font-size: 1.4rem;
+@media screen and (max-width: 768px) {
+  .footerImg {
+    margin-right: 0;
+  }
+
+  .pom {
+    width: 120px;
+    top: 40px;
+    left: -110px;
+  }
 }
 
 .snsLink {
