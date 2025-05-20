@@ -164,6 +164,12 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 1440px) {
+  .topImg {
+    background: url(../image/main01.png) calc((100% - 1440px) / 2) bottom no-repeat;
+  }
+}
+
 .toolTop {
   position: absolute;
   width: 180px;
