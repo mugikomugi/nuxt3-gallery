@@ -166,7 +166,7 @@ body {
 
 @media screen and (min-width: 1440px) {
   .topImg {
-    background: url(../image/main01.png) 50% bottom no-repeat;
+    background: url(../image/main01.png) 1000px bottom no-repeat;
   }
 }
 
