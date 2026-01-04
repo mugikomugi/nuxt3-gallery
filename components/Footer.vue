@@ -11,7 +11,7 @@
       <p class="footerText mt20">
         追記：<br />
         開発初期の最初の読み込み時にJSが動かない時があり、デベロッパーツールを見るとハイドレーションエラーが出ていました。<br />
-        再度、読み込みをするとエラーは出なくなりJSは正常に動いていました。<br />このエラーについて解決したのでメモっておきます。claudeを使いました。<br />やはりPromiseチェーンを使って読込み制御が必要だったようです。最初はnuxt.config.tsにscriptでbodyCloseを指定していたのですが、これはNuxt3から廃止されていたようです。知らなかった。。<br />自作jsはcomponentsにuseHeadを使わずonMountedで読み込ませました。claude先生、助かりました。
+        再度、読み込みをするとエラーは出なくなりJSは正常に動いていました。<br />このエラーについて解決したのでメモっておきます。claudeを使いました。<br />やはりPromiseチェーンを使って読込み制御が必要だったようです。最初はnuxt.config.tsにscriptでbodyCloseを指定していたのですが、これはNuxt3から廃止されていたようです。知らなかった。。<br />自作jsはlayoutsの各ファイルにuseHeadを使わずonMountedで読み込ませました。claude先生、助かりました。
       </p>
     </section>
     
